@@ -1,0 +1,30 @@
+name: Create addons.json
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'addons/**'
+  workflow_dispatch:
+
+jobs:
+  json-from-dir:
+    runs-on: ubuntu-latest
+    name: Create JSON file
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set github config
+        run: |
+          git config user.name github-actions
+          git config user.email "<>"
+      - name: Save file
+        id: save-file
+        uses: aliernfrog/json-from-dir@v1.0.4
+        with:
+          folder: "addons"
+          output: "addons.json"
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "chore: update addons.json"
+      - name: Push changes
+        run: git push
