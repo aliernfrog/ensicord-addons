@@ -1,0 +1,5 @@
+{
+  "name": "Set theme to system",
+  "description": "Makes Ensicord follow your system theme",
+  "setAppTheme": "SYSTEM"
+}
