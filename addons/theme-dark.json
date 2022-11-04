@@ -1,6 +1,6 @@
 {
   "name": "Set theme to dark",
   "description": "Very recommend",
-  "thumbnail": "https://aliernfrog.github.io/ensicord-addons/assets/thumbnails/ensicord.png",
+  "thumbnailUrl": "https://aliernfrog.github.io/ensicord-addons/assets/thumbnails/ensicord.png",
   "setAppTheme": "DARK"
 }
