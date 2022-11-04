@@ -1,5 +1,6 @@
 {
   "name": "Set theme to light",
   "description": "You won't like this",
+  "thumbnail": "https://aliernfrog.github.io/ensicord-addons/nonexistent.png",
   "setAppTheme": "LIGHT"
 }
