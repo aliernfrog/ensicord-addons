@@ -1,6 +1,0 @@
-{
-  "name": "Clear saved words and verbs",
-  "description": "Sets saved words and verbs to an empty set",
-  "setEnsiWords": [],
-  "setEnsiVerbs": []
-}
