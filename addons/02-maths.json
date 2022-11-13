@@ -1060,31 +1060,13 @@
     },
     {
       "type": "set",
-      "key": "ensiNormalTypes",
+      "key": "ensiTypesNormal",
       "collection": [
         "%WORD%%VERB%%WORD% = %WORD%",
         "%WORD%%VERB%%WORD% = %WORD% %EMOTION%",
         "%EMOTION% %WORD%%VERB%%WORD% = %WORD%",
         "%EMOTION% %WORD%%VERB%%WORD% = %WORD% %EMOTION%",
         "%WORD% is greater than %WORD%"
-      ]
-    },
-    {
-      "type": "set",
-      "key": "ensiQuestionTypes",
-      "collection": [
-        "%WORD%%VERB%%WORD% = %WORD%",
-        "%WORD%%VERB%%WORD% = %WORD% %EMOTION%",
-        "%EMOTION% %WORD%%VERB%%WORD% = %WORD%",
-        "%EMOTION% %WORD%%VERB%%WORD% = %WORD% %EMOTION%",
-        "%WORD% is greater than %WORD%"
-      ]
-    },
-    {
-      "type": "set",
-      "key": "ensiStartingTypes",
-      "collection": [
-        ""
       ]
     }
   ]
