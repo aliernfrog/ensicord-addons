@@ -1,6 +1,0 @@
-{
-  "name": String,
-  "description": String,
-  "setAppTheme": String? ["SYSTEM","LIGHT","DARK"],
-  "setEnsiUserName": String?
-}
