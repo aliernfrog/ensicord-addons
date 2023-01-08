@@ -4,12 +4,19 @@ on:
     branches: [ "main" ]
     paths:
       - 'addons/**'
+  workflow_run:
+    branches: ["main"]
+    workflows: ["Generate Ensi add-on"]
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
   json-from-dir:
     runs-on: ubuntu-latest
     name: Create JSON file
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - name: Set github config
