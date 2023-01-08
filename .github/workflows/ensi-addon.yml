@@ -1,0 +1,34 @@
+name: Generate Ensi add-on
+on:
+  workflow-dispatch:
+    inputs:
+      json:
+        description: "Add-on JSON"
+        required: true
+        type: string
+
+jobs:
+  generate-addon:
+    runs-on: ubuntu-latest
+    name: "Generate addon"
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set github config
+        run: |
+          git config user.name github-actions
+          git config user.email "<>"
+      - name: Write to file
+        uses: "DamianReeves/write-file-action@v1.2"
+        with:
+          path: addons/01-ensi.json
+          write-mode: overwrite
+          contents: ${{ github.event.inputs.json }}
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "feat(ensi): update addon"
+      - name: Push changes
+        run: git push
