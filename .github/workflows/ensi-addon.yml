@@ -1,6 +1,6 @@
 name: Generate Ensi add-on
 on:
-  workflow-dispatch:
+  workflow_dispatch:
     inputs:
       json:
         description: "Add-on JSON"
