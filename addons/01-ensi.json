@@ -2518,7 +2518,8 @@
         "closed",
         "uploading",
         "exist",
-        "absent"
+        "absent",
+        "hacked"
       ]
     },
     {
