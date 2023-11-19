@@ -2526,7 +2526,8 @@
           "uploading",
           "exist",
           "absent",
-          "hacked"
+          "hacked",
+          "spinning"
         ]
       },
       {
