@@ -13,7 +13,7 @@ const DIST_DIR = "./dist";
 const ADDONS_DIR = "./src/addons";
 const STATIC_FILES_DIR = "./src/static";
 const ADDONS_OUTPUT_DIR = `${DIST_DIR}/addons`;
-const METAS_OUTPUT = `${DIST_DIR}/addons.json`;
+const METAS_OUTPUT = `${DIST_DIR}/all`;
 
 const metas = [];
 
@@ -30,7 +30,7 @@ async function build() {
     const addon = await import(file);
     const innerPath = file.replace(`${ADDONS_DIR}/`, "");
     if (!addon.data && !addon.build) throw Error(`${innerPath}: No data or build method specified!`);
-    const outputPath = `${ADDONS_OUTPUT_DIR}/${replaceExtension(innerPath, "js", "json")}`;
+    const outputPath = `${ADDONS_OUTPUT_DIR}/${removeExtension(innerPath, "js")}`;
     const builder = new AddonBuilder({
       ...addon.data,
       path: outputPath.slice(DIST_DIR.length, outputPath.length)
@@ -74,10 +74,10 @@ function readdirRecursively(path) {
   return files;
 }
 
-function replaceExtension(name, currentExtension, newExtension) {
-  if (!name.endsWith(currentExtension)) return name;
-  const withoutExtension = name.slice(0, -(currentExtension.length));
-  return withoutExtension+newExtension;
+function removeExtension(name, extension) {
+  if (!extension.startsWith(".")) extension = "."+extension;
+  if (!name.endsWith(extension)) return name;
+  return name.slice(0, -(extension.length));
 }
 
 // Addon builder class
