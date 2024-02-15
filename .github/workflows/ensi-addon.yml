@@ -1,16 +1,16 @@
-name: Generate Ensi add-on
+name: Update Ensi data
 on:
   workflow_dispatch:
     inputs:
       json:
-        description: "Add-on JSON"
+        description: "Data JSON"
         required: true
         type: string
 
 jobs:
   generate-addon:
     runs-on: ubuntu-latest
-    name: "Generate addon"
+    name: "Update data"
     permissions:
       contents: write
     
@@ -20,12 +20,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Write to file
         uses: "DamianReeves/write-file-action@v1.2"
         with:
-          path: addons/01-ensi.json
+          path: src/values/ensi.json
           write-mode: overwrite
           contents: ${{ github.event.inputs.json }}
+      
       - name: Commit changes
         run: |
           git add .
