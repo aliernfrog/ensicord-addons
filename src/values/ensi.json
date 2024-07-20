@@ -2685,7 +2685,8 @@
         "unverify",
         "deactivate",
         "unverified",
-        "frying"
+        "frying",
+        "go"
       ]
     },
     {
