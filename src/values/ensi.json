@@ -2703,7 +2703,8 @@
         "go",
         "connected",
         "revive",
-        "kick"
+        "kick",
+        "tracked"
       ]
     },
     {
