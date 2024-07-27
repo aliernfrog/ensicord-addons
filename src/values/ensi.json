@@ -2524,7 +2524,9 @@
         "gender",
         "carpet",
         "posts",
-        "book"
+        "book",
+        "release",
+        "half"
       ]
     },
     {
