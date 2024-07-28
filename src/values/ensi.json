@@ -2531,7 +2531,8 @@
         "obvious",
         "lan",
         "transparent",
-        "script"
+        "script",
+        "manually"
       ]
     },
     {
@@ -2736,7 +2737,9 @@
         "cooked",
         "roll",
         "return",
-        "means"
+        "means",
+        "push",
+        "resets"
       ]
     },
     {
