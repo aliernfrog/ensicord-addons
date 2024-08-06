@@ -2580,7 +2580,9 @@
         "transition",
         "meaning",
         "fire",
-        "responsible"
+        "responsible",
+        "cascade",
+        "friends"
       ]
     },
     {
