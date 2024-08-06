@@ -2579,7 +2579,8 @@
         "code",
         "transition",
         "meaning",
-        "fire"
+        "fire",
+        "responsible"
       ]
     },
     {
@@ -2796,7 +2797,8 @@
         "blasted",
         "stick",
         "throwing",
-        "regret"
+        "regret",
+        "raised"
       ]
     },
     {
