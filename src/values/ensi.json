@@ -2597,7 +2597,9 @@
         "gamebar",
         "tax",
         "profiles",
-        "hardware"
+        "hardware",
+        "xd",
+        "fbi"
       ]
     },
     {
